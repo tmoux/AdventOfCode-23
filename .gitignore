@@ -30,4 +30,4 @@ CMakeLists.txt
 
 dist-newstyle/
 
-**/sol*
+**/sol

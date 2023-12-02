@@ -12,3 +12,4 @@ Unless otherwise specified, programs read from standard input and print to stand
 | Day | Time (Part 1 / 2)    | Rank          |
 |-----|----------------------|---------------|
 | 1   | 00:02:08 / 00:07:42  | 250 / 149     | 
+| 2   | 00:07:41 / 00:10:48  | 655 / 659     |
