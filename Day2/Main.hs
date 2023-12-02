@@ -1,5 +1,6 @@
 module Main where
 
+import Control.Applicative ((<**>))
 import Data.Either (fromRight)
 import Text.Parsec
 import Text.Parsec.String (Parser)
@@ -14,11 +15,12 @@ parseRGB = chainl parseSingle (string ", " >> pure add) (RGB 0 0 0)
 
 parseSingle :: Parser RGB
 parseSingle =
-  choice
-    [ try $ (\x -> RGB x 0 0) <$> parseInt <* string " red",
-      try $ (\x -> RGB 0 x 0) <$> parseInt <* string " green",
-      try $ (\x -> RGB 0 0 x) <$> parseInt <* string " blue"
-    ]
+  parseInt
+    <**> choice
+      [ try $ string " red" >> pure (\x -> RGB x 0 0),
+        try $ string " green" >> pure (\x -> RGB 0 x 0),
+        try $ string " blue" >> pure (\x -> RGB 0 0 x)
+      ]
 
 parseLine :: Parser [RGB]
 parseLine = string "Game " *> parseInt *> string ": " *> parseRGB `sepBy` string "; "
