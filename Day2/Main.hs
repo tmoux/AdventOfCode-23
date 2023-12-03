@@ -22,11 +22,11 @@ parseRGB = chainl parseSingle (string ", " >> pure (<>)) mempty
 
 parseSingle :: Parser RGB
 parseSingle =
-  parseInt
+  parseInt <* string " "
     <**> choice
-      [ try $ string " red" >> pure (\x -> RGB x 0 0),
-        try $ string " green" >> pure (\x -> RGB 0 x 0),
-        try $ string " blue" >> pure (\x -> RGB 0 0 x)
+      [ string "red" >> pure (\x -> RGB x 0 0),
+        string "green" >> pure (\x -> RGB 0 x 0),
+        string "blue" >> pure (\x -> RGB 0 0 x)
       ]
 
 parseLine :: Parser [RGB]
