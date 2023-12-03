@@ -18,10 +18,10 @@ int main() {
   int part1 = 0;
   F0R(i, N) {
     F0R(j, M) {
-      if (j < M && isdigit(grid[i][j])) {
+      if (isdigit(grid[i][j])) {
         int n = 0;
         int l = j;
-        while (isdigit(grid[i][j])) {
+        while (j < M && isdigit(grid[i][j])) {
           n = n * 10 + (grid[i][j++] - '0');
         }
         int r = j-1;
