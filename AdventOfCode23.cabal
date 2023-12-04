@@ -55,12 +55,12 @@ common dependencies
   build-depends:
     , base         ^>=4.17.2.0
     , containers
+    , extra
     , mtl
     , parsec
     , split
     , text
     , text-format
-    , extra
 
   default-language: Haskell2010
 
