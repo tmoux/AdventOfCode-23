@@ -78,3 +78,8 @@ executable Day4
   import:         warnings, dependencies
   main-is:        Main.hs
   hs-source-dirs: Day4
+
+executable Day6
+  import:         warnings, dependencies
+  main-is:        Main.hs
+  hs-source-dirs: Day6
