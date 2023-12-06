@@ -16,3 +16,4 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 3   | 00:05:58 / 00:08:53  |   49 /   26   |
 | 4   | 00:03:56 / 00:06:57  |  329 /   86   |
 | 5   | 00:17:53 / 00:56:07  | 1032 / 1238   |
+| 6   | 00:03:11 / 00:06:50  |  102 /  354   |
