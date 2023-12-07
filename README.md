@@ -17,3 +17,13 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 4   | 00:03:56 / 00:06:57  |  329 /   86   |
 | 5   | 00:17:53 / 00:56:07  | 1032 / 1238   |
 | 6   | 00:03:11 / 00:06:50  |  102 /  354   |
+| 7   | 00:14:08 / 00:28:48  |  333 /  726   |
+
+### Day 7 (Camel Cards)
+
+This was a pretty straightforward implementation exercise, and evaluating poker hands is a common task.
+Unfortunately, I had some WAs on part 1 due to forgetting to add the full house case.
+
+For part 2, I first thought I could separately count the number of jokers and do some casework to determine what is the best possible hand.
+However, I decided this was too error-prone. Instead, I used the observation that it's always optimal to convert a J into one of your non-J cards already in your hand (modulo the case where you have 5 J's, in which case this is a five of a kind). Thus, we can generate a list of possible hands formed by replacing each J with another card.
+The worst case is when we have 2 J's and 3 distinct non-J's, for a total of 9 possible hands to check.
