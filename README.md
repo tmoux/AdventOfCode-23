@@ -28,11 +28,13 @@ Unfortunately, I had some WAs on part 1 due to forgetting to add the full house 
 For part 2, I first thought I could separately count the number of jokers and do some casework to determine what is the best possible hand.
 However, I decided this was too error-prone. Instead, I used the observation that it's always optimal to convert a J into one of your non-J cards already in your hand (modulo the case where you have 5 J's, in which case this is a five of a kind). Thus, we can generate a list of possible hands formed by replacing each J with another card.
 The worst case is when we have 2 J's and 3 distinct non-J's, for a total of 9 possible hands to check.
+
 [Actually, we don't even need to enumerate these different hands, a greedy strategy of assigning J's is always optimal.]
 
 ### Day 8 (Haunted Wasteland)
 
 Part 1 is a quick implementation exercise.
-Part 2 seems nearly intractable in the general case. After sitting for a while being confused why the problem was so hard, I looked at the inputs and discovered there were only 6 "A"-rooms, and their paths/cycles were disjoint, and only contained one "Z"-room, *and* the the lengths of the cycles are equal to the distance to the "Z"-room!
+
+Part 2 seems nearly intractable in the general case. After sitting for a while being confused why the problem was so hard, I looked at the inputs and discovered there were only 6 "A"-rooms, and their paths/cycles were disjoint, and only contained one "Z"-room, *and* the lengths of the cycles are equal to the distance to the "Z"-room!
 Therefore the problem reduces to a CRT problem, which itself degenerates to an LCM calculation.
 
