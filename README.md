@@ -19,6 +19,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 6   | 00:03:11 / 00:06:50  |  102 /  354   |
 | 7   | 00:14:08 / 00:28:48  |  333 /  726   |
 | 8   | 00:02:53 / 00:56:12  |   35 / 4397   |
+| 9   | 00:05:44 / 00:06:52  |  295 /  191   |
 
 ### Day 7 (Camel Cards)
 
@@ -38,3 +39,7 @@ Part 1 is a quick implementation exercise.
 Part 2 seems nearly intractable in the general case. After sitting for a while being confused why the problem was so hard, I looked at the inputs and discovered there were only 6 "A"-rooms, and their paths/cycles were disjoint, and only contained one "Z"-room, *and* the lengths of the cycles are equal to the distance to the "Z"-room!
 Therefore the problem reduces to a CRT problem, which itself degenerates to an LCM calculation.
 
+### Day 9 (Mirage Maintenance)
+
+This was a pretty straightforward problem. Unfortunately my performance was hindered by my slow typing today.
+I was also unsure how to handle a case where the list would become empty before we hit all zeros (e.g, `1 2`), but I eventually assumed this wouldn't be a problem and chugged on.
