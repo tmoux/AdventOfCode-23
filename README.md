@@ -9,17 +9,18 @@ Currently I'm trying to use Haskell; these solutions can be run using `cabal run
 Per the creator's request, problem inputs will not be uploaded.
 Unless otherwise specified, programs read from standard input and print to standard output.
 
-| Day | Time (Part 1 / 2)    | Rank          |
-|-----|----------------------|---------------|
-| 1   | 00:02:08 / 00:07:42  |  250 /  149   | 
-| 2   | 00:07:41 / 00:10:48  |  655 /  659   |
-| 3   | 00:05:58 / 00:08:53  |   49 /   26   |
-| 4   | 00:03:56 / 00:06:57  |  329 /   86   |
-| 5   | 00:17:53 / 00:56:07  | 1032 / 1238   |
-| 6   | 00:03:11 / 00:06:50  |  102 /  354   |
-| 7   | 00:14:08 / 00:28:48  |  333 /  726   |
-| 8   | 00:02:53 / 00:56:12  |   35 / 4397   |
-| 9   | 00:05:44 / 00:06:52  |  295 /  191   |
+| Day  | Time (Part 1 / 2)    | Rank          |
+|------|----------------------|---------------|
+|  1   | 00:02:08 / 00:07:42  |  250 /  149   | 
+|  2   | 00:07:41 / 00:10:48  |  655 /  659   |
+|  3   | 00:05:58 / 00:08:53  |   49 /   26   |
+|  4   | 00:03:56 / 00:06:57  |  329 /   86   |
+|  5   | 00:17:53 / 00:56:07  | 1032 / 1238   |
+|  6   | 00:03:11 / 00:06:50  |  102 /  354   |
+|  7   | 00:14:08 / 00:28:48  |  333 /  726   |
+|  8   | 00:02:53 / 00:56:12  |   35 / 4397   |
+|  9   | 00:05:44 / 00:06:52  |  295 /  191   |
+| 10   | 00:19:42 / 01:18:53  |  539 / 1200   |
 
 ### Day 7 (Camel Cards)
 
@@ -43,3 +44,4 @@ Therefore the problem reduces to a CRT problem, which itself degenerates to an L
 
 This was a pretty straightforward problem. Unfortunately my performance was hindered by my slow typing today.
 I was also unsure how to handle a case where the list would become empty before we hit all zeros (e.g, `1 2`), but I eventually assumed this wouldn't be a problem and chugged on.
+
