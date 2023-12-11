@@ -21,6 +21,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 |  8   | 00:02:53 / 00:56:12  |   35 / 4397   |
 |  9   | 00:05:44 / 00:06:52  |  295 /  191   |
 | 10   | 00:19:42 / 01:18:53  |  539 / 1200   |
+| 11   | 00:20:03 / 00:25:35  | 2098 / 1611   |
 
 ### Day 7 (Camel Cards)
 
@@ -45,3 +46,9 @@ Therefore the problem reduces to a CRT problem, which itself degenerates to an L
 This was a pretty straightforward problem. Unfortunately my performance was hindered by my slow typing today.
 I was also unsure how to handle a case where the list would become empty before we hit all zeros (e.g, `1 2`), but I eventually assumed this wouldn't be a problem and chugged on.
 
+### Day 11 (Cosmic Expansion)
+
+For some reason, I decided the best way to approach part 1 was to literally add rows and columns to the grid (perhaps influenced by the previous day's problem).
+Then, I started to code a BFS instead of just computing the Manhattan distances directly.
+When I got to part 2, I realized the intended solution was far simpler than what I did, so I rewrote my code to use the intended method.
+This was a pretty easy one, but I wasn't thinking straight and missed the simple and obvious way to do it.
