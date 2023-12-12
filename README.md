@@ -22,6 +22,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 |  9   | 00:05:44 / 00:06:52  |  295 /  191   |
 | 10   | 00:19:42 / 01:18:53  |  539 / 1200   |
 | 11   | 00:20:03 / 00:25:35  | 2098 / 1611   |
+| 12   | 00:07:28 / 00:23:23  |   71 /  107   |
 
 ### Day 7 (Camel Cards)
 
@@ -52,3 +53,9 @@ For some reason, I decided the best way to approach part 1 was to literally add 
 Then, I started to code a BFS instead of just computing the Manhattan distances directly.
 When I got to part 2, I realized the intended solution was far simpler than what I did, so I rewrote my code to use the intended method.
 This was a pretty easy one, but I wasn't thinking straight and missed the simple and obvious way to do it.
+
+### Day 12 (Hot Springs)
+
+I recognized that this could be solved with a DP, but for part 1 I saw that the strings were at most length 20 or so and figured a brute force approach would be faster to code.
+For part 2, we have to do a DP with a state that store information like the current positions in the string/list of runs, and also the length of our current run.
+The bounds are pretty loose, so anything along these lines should easily pass (for instance, I initially had an extra state signalling whether the previous character was a # or not.)
