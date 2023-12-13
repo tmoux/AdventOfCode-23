@@ -23,6 +23,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 10   | 00:19:42 / 01:18:53  |  539 / 1200   |
 | 11   | 00:20:03 / 00:25:35  | 2098 / 1611   |
 | 12   | 00:07:28 / 00:23:23  |   71 /  107   |
+| 13   | 00:11:08 / 00:34:54  |  216 / 1275   |
 
 ### Day 7 (Camel Cards)
 
@@ -59,3 +60,12 @@ This was a pretty easy one, but I wasn't thinking straight and missed the simple
 I recognized that this could be solved with a DP, but for part 1 I saw that the strings were at most length 20 or so and figured a brute force approach would be faster to code.
 For part 2, we have to do a DP with a state that store information like the current positions in the string/list of runs, and also the length of our current run.
 The bounds are pretty loose, so anything along these lines should easily pass (for instance, I initially had an extra state signalling whether the previous character was a # or not.)
+
+### Day 13 (Point of Incidence)
+
+This was a pretty easy problem that I managed to bungle due to poor reading comprehension/silly mistakes.
+First, I didn't understand how to summarize the answer--I thought we were asked to just count the number of column / row reflections, instead of assuming that there would be a unique column / row reflection.
+
+Second, I didn't catch the uniqueness guarantees for part 2. Apparently, there exists a unique square such that if we flip it, there is a unique new reflection line (however, the old reflection line *may or may not* still exist).
+
+Overall, the problem is not bad, but I wasn't expecting some of these odd constraints and skipped/misread them on my first pass through.
