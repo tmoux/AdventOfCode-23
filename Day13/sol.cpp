@@ -88,29 +88,22 @@ int main() {
       auto [A, B] = F(g);
       int N = g.size(), M = g[0].size();
 
-      bool h = false;
       F0R(i, N) {
         F0R(j, M) {
           g[i][j] = g[i][j] == '#' ? '.' : '#';
           auto [a, b] = F(g, {A, B});
-          cout << i << ' ' << j << ": " << A << ' ' << B << " -- " << a << ' ' << b << endl;
           if (a > 0 && a != A) {
             ans += 100 * a;
-            cout << A << ' ' << B << ' ' << a << ' ' << b << endl;
-            h = true;
             goto done;
           }
           else if (b > 0 && b != B) {
             ans += b;
-            cout << A << ' ' << B << ' ' << a << ' ' << b << endl;
-            h = true;
             goto done;
           }
           g[i][j] = g[i][j] == '#' ? '.' : '#';
         }
       }
       done:;
-      assert(h);
 
       g.clear();
     }
