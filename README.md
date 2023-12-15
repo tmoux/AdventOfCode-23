@@ -25,6 +25,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 12   | 00:07:28 / 00:23:23  |   71 /  107   |
 | 13   | 00:11:08 / 00:34:54  |  216 / 1275   |
 | 14   | 00:02:08 / 00:07:42  |  250 /  149   |
+| 15   | 00:04:41 / 00:15:53  | 1051 /  461   |
 
 ### Day 7 (Camel Cards)
 
