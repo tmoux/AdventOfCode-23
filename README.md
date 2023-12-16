@@ -24,8 +24,9 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 11   | 00:20:03 / 00:25:35  | 2098 / 1611   |
 | 12   | 00:07:28 / 00:23:23  |   71 /  107   |
 | 13   | 00:11:08 / 00:34:54  |  216 / 1275   |
-| 14   | 00:02:08 / 00:07:42  |  250 /  149   |
+| 14   | 00:02:08 / 00:07:42  |   91 /   27   |
 | 15   | 00:04:41 / 00:15:53  | 1051 /  461   |
+| 16   | 00:13:36 / 00:16:40  |  202 /  145   |
 
 ### Day 7 (Camel Cards)
 
@@ -77,3 +78,10 @@ Overall, the problem is not bad, but I wasn't expecting some of these odd constr
 Another 2d grid problem...this one was mostly just following directions and trying not to misread what is the new weird summary statistic to output.
 Really not much to say about this one, I placed surprisingly high on part 2 despite getting WA initially and having to wait a minute to submit again.
 Advent of Code seems to quite like these cycle detection problems, where I am particularly prone to off-by-one errors.
+
+### Day 16 (The Floor Will Be Lava)
+
+Another day yet ANOTHER 2d grid problem. When I looked at the input I immediately knew it was either some plinko simulation/mirror simulation.
+This is just a straightforward BFS.
+I wasn't fast enough to rank in the top 100, but I didn't make any major mistakes, just implementation was a bit slow.
+I conjectured that I didn't actually need to check that the initial direction was facing the correct way. This turned out to be true, thought I'm not immediately sure why this is the case.
