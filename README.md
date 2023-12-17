@@ -27,6 +27,9 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 14   | 00:02:08 / 00:07:42  |   91 /   27   |
 | 15   | 00:04:41 / 00:15:53  | 1051 /  461   |
 | 16   | 00:13:36 / 00:16:40  |  202 /  145   |
+| 17   | 00:12:29 / 00:20:38  |   76 /  113   |
+
+Total points: 347
 
 ### Day 7 (Camel Cards)
 
@@ -85,3 +88,10 @@ Another day yet ANOTHER 2d grid problem. When I looked at the input I immediatel
 This is just a straightforward BFS.
 I wasn't fast enough to rank in the top 100, but I didn't make any major mistakes, just implementation was a bit slow.
 I conjectured that I didn't actually need to check that the initial direction was facing the correct way. This turned out to be true, thought I'm not immediately sure why this is the case.
+
+### Day 17 (Clumsy Crucible)
+
+This year is just all grid problems, apparently.
+This is a plain single-source shortest paths problem (there was a very similar one last year, iirc).
+The main decision I made was whether to use my normal Dijkstra's template, which would require me to map my state pairs to indices, or adapt it to return a multidimensional distance array. I decided on the latter.
+I was a bit annoyed that I made multiple different off-by-one errors; initially, I missed the condition that the first square *doesn't* count towards the total, and in part 2, my answer was off by one because I didn't realize the first square also doesn't count towards your current direction streak (which I also misread on part 1, but apparently didn't affect my answer).
