@@ -3,6 +3,9 @@
 Each day is contained in a separate folder.
 I write C++ solutions for speed (to attempt to make it on the leaderboard). I won't try to clean up these solutions; they may contain debug output and other nonsense. They can be compiled with the Makefile in each folder.
 
+(Note: I use `g++-13` as my compiler; you can change this by updating the `CC` variable in the Makefile.
+ Note that I use the `<bits/stdc++.h>` header which is not available with all C++ compilers.)
+
 I will also try to write some cleaner solutions in other languages.
 Currently I'm trying to use Haskell; these solutions can be run using `cabal run Day{X} < input` in the root directory.
 
