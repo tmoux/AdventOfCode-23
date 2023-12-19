@@ -32,6 +32,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 16   | 00:13:36 / 00:16:40  |  202 /  145   |
 | 17   | 00:12:29 / 00:20:38  |   76 /  113   |
 | 18   | 00:17:10 / 01:35:08  |  585 / 1988   |
+| 19   | 00:28:14 / 01:03:55  | 1456 / 10557  |
 
 Total points: 347
 
