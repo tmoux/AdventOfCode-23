@@ -14,25 +14,26 @@ Unless otherwise specified, programs read from standard input and print to stand
 
 | Day  | Time (Part 1 / 2)    | Rank          |
 |------|----------------------|---------------|
-|  1   | 00:02:08 / 00:07:42  |  250 /  149   | 
-|  2   | 00:07:41 / 00:10:48  |  655 /  659   |
-|  3   | 00:05:58 / 00:08:53  |   49 /   26   |
-|  4   | 00:03:56 / 00:06:57  |  329 /   86   |
-|  5   | 00:17:53 / 00:56:07  | 1032 / 1238   |
-|  6   | 00:03:11 / 00:06:50  |  102 /  354   |
-|  7   | 00:14:08 / 00:28:48  |  333 /  726   |
-|  8   | 00:02:53 / 00:56:12  |   35 / 4397   |
-|  9   | 00:05:44 / 00:06:52  |  295 /  191   |
-| 10   | 00:19:42 / 01:18:53  |  539 / 1200   |
-| 11   | 00:20:03 / 00:25:35  | 2098 / 1611   |
-| 12   | 00:07:28 / 00:23:23  |   71 /  107   |
-| 13   | 00:11:08 / 00:34:54  |  216 / 1275   |
-| 14   | 00:02:08 / 00:07:42  |   91 /   27   |
-| 15   | 00:04:41 / 00:15:53  | 1051 /  461   |
-| 16   | 00:13:36 / 00:16:40  |  202 /  145   |
-| 17   | 00:12:29 / 00:20:38  |   76 /  113   |
-| 18   | 00:17:10 / 01:35:08  |  585 / 1988   |
+|  1   | 00:02:08 / 00:07:42  |  250 /   149  | 
+|  2   | 00:07:41 / 00:10:48  |  655 /   659  |
+|  3   | 00:05:58 / 00:08:53  |   49 /    26  |
+|  4   | 00:03:56 / 00:06:57  |  329 /    86  |
+|  5   | 00:17:53 / 00:56:07  | 1032 /  1238  |
+|  6   | 00:03:11 / 00:06:50  |  102 /   354  |
+|  7   | 00:14:08 / 00:28:48  |  333 /   726  |
+|  8   | 00:02:53 / 00:56:12  |   35 /  4397  |
+|  9   | 00:05:44 / 00:06:52  |  295 /   191  |
+| 10   | 00:19:42 / 01:18:53  |  539 /  1200  |
+| 11   | 00:20:03 / 00:25:35  | 2098 /  1611  |
+| 12   | 00:07:28 / 00:23:23  |   71 /   107  |
+| 13   | 00:11:08 / 00:34:54  |  216 /  1275  |
+| 14   | 00:02:08 / 00:07:42  |   91 /    27  |
+| 15   | 00:04:41 / 00:15:53  | 1051 /   461  |
+| 16   | 00:13:36 / 00:16:40  |  202 /   145  |
+| 17   | 00:12:29 / 00:20:38  |   76 /   113  |
+| 18   | 00:17:10 / 01:35:08  |  585 /  1988  |
 | 19   | 00:28:14 / 01:03:55  | 1456 / 10557  |
+| 20   | 00:26:14 / 01:10:331 |  147 /   564  |
 
 Total points: 347
 
@@ -100,3 +101,11 @@ This year is just all grid problems, apparently.
 This is a plain single-source shortest paths problem (there was a very similar one last year, iirc).
 The main decision I made was whether to use my normal Dijkstra's template, which would require me to map my state pairs to indices, or adapt it to return a multidimensional distance array. I decided on the latter.
 I was a bit annoyed that I made multiple different off-by-one errors; initially, I missed the condition that the first square *doesn't* count towards the total, and in part 2, my answer was off by one because I didn't realize the first square also doesn't count towards your current direction streak (which I also misread on part 1, but apparently didn't affect my answer).
+
+### Day 20 (Pulse Propagation)
+
+For some reason I had a very difficult time understanding the problem statement and had to read the same paragraph multiple times.
+As it turns out, I completely misunderstood the order of the pulses, which are supposed to be processed in a BFS-style rather than DFS.
+Somehow, this did not affect my answer for part 1, but this did bungle some of my cycle calculations (but only two of them, for some reason).
+
+
