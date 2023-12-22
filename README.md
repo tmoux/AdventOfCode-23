@@ -33,9 +33,11 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 17   | 00:12:29 / 00:20:38  |   76 /   113  |
 | 18   | 00:17:10 / 01:35:08  |  585 /  1988  |
 | 19   | 00:28:14 / 01:03:55  | 1456 / 10557  |
-| 20   | 00:26:14 / 01:10:331 |  147 /   564  |
+| 20   | 00:26:14 / 01:10:31  |  147 /   564  |
+| 21   | 00:04:26 / 02:49:16  |   77 /  1273  |
+| 22   | 00:18:51 / 00:23:52  |   70 /    41  |
 
-Total points: 347
+Total points: 462
 
 ### Day 7 (Camel Cards)
 
@@ -108,4 +110,8 @@ For some reason I had a very difficult time understanding the problem statement 
 As it turns out, I completely misunderstood the order of the pulses, which are supposed to be processed in a BFS-style rather than DFS.
 Somehow, this did not affect my answer for part 1, but this did bungle some of my cycle calculations (but only two of them, for some reason).
 
-
+### Day 22 (Sand Slabs)
+A 3-dimensional problem that is not too bad.
+We can simulate the falling bricks by processing them in increasing order of z.
+A brick is the sole supporter of another brick if the former is the only brick at the z-coordinate right below the latter that is in the latters (x, y) rectangle.
+For part 2, we need to construct a directed graph of all supporting bricks and run topsort.
