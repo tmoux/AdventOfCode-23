@@ -38,6 +38,7 @@ Unless otherwise specified, programs read from standard input and print to stand
 | 22   | 00:18:51 / 00:23:52  |   70 /    41  |
 | 23   | 00:28:24 / 01:24:22  | 1106 /   883  |
 | 24   | 00:15:43 / 01:22:42  |   93 /   283  |
+| 25   | 00:22:54 / 00:22:58  |  435 /   376  |
 
 Total points: 470
 
@@ -117,3 +118,11 @@ A 3-dimensional problem that is not too bad.
 We can simulate the falling bricks by processing them in increasing order of z.
 A brick is the sole supporter of another brick if the former is the only brick at the z-coordinate right below the latter that is in the latters (x, y) rectangle.
 For part 2, we need to construct a directed graph of all supporting bricks and run topsort.
+
+### Day 25 (Snowverload)
+
+A surprisingly simple graph problem to end the year.
+I didn't realize this was a min cut problem at all.
+Instead, I brute forced removing two edges and checked if the resulting graph is not biconnected (has a bridge).
+This took a few minutes to run, but coupled with a couple silly bugs, I didn't complete it nearly close enough for the leaderboard.
+For fun I implemented a min-cut solution using Karger's algorithm.
