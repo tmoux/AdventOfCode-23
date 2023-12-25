@@ -107,7 +107,7 @@ vector<int> karger() {
 
 vector<int> mincut() {
   vector<int> ans;
-  REP(500) {
+  while (ans.empty() || sz(ans) > 3) {
     auto v = karger();
     if (ans.empty() || sz(v) < sz(ans)) ans = v;
   }
